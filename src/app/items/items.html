@@ -1,0 +1,15 @@
+<div class="container text-center">
+  <div class="row">
+    @for (product of data; track product.name) {
+  <div class="col">
+      <app-itemcard [Item]="product"></app-itemcard>
+    </div>
+   
+} @empty {
+  <li>There are no items.</li>
+}
+   
+  </div>
+</div>
+
+
