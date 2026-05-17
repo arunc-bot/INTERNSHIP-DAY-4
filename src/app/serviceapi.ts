@@ -7,7 +7,10 @@ import { APP_ID, Injectable } from '@angular/core';
 export class Serviceapi {
   constructor (private http:HttpClient) {}
   
-  getFakestoreItems(){
-    return this.http.get("https://fakeapi.example.com/api/v1/perfumes/:id")
+  getPerfumeItems(){
+    return this.http.get("https://dummyjson.com/products/category/fragrances?limit=100");
+  }
+  getPerfumeItemsById(id:any){
+    return this.http.get(`https://dummyjson.com/products/category/fragrances?limit=100/${id}`)
   }
 }
